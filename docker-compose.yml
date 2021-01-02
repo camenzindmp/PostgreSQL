@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  mysql:
+    image: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./database-data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_PASSWORD=adminpassword
+      - POSTGRES_USER=postgresql_admin
+      - POSTGRES_DB=postgresql
